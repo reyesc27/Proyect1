@@ -1,0 +1,63 @@
+<!--h2>
+  Listado clientes
+</h2>
+<div *ngIf="! clientes.length">No hay clientes por el momento</div>
+<div>
+  <article *ngFor="let cliente of clientes">
+    <span>{{cliente.nombre}}</span>
+    <span>{{cliente.App}}</span>
+    <span>{{cliente.Apm}}</span>
+    <span>{{cliente.edad}}</span>
+    <span>{{cliente.sexo}}</span>
+    <span>{{cliente.correo}}</span>
+  </article>
+</div>
+
+-->
+
+<table class="table"> 
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+      <th scope="col">App</th>
+      <th scope="col">Apm</th>
+      <th scope="col">edad</th>
+      <th scope="col">sexo</th>
+      <th scope="col">correo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><div *ngFor="let cliente of clientes"> 
+        <i class="fa  {{cliente.icono}}"></i>
+      </div></td>
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.nombre}}
+      </div></td>
+
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.App}}
+      </div></td>
+
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.Apm}}
+      </div></td>
+
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.sexo}}
+      </div></td>
+
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.edad}}
+      </div></td>
+
+      <td><div *ngFor="let cliente of clientes"> 
+        {{cliente.correo}}
+      </div></td>
+
+    </tr>
+   
+  </tbody>
+</table>

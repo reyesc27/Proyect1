@@ -1,0 +1,68 @@
+<!--h2>Alta cliente</h2>
+<p>
+  <span>Nombre:</span>
+  <input type="text" [(ngModel)]="cliente.nombre">
+</p>
+<p>
+  <span>App:</span>
+  <input type="text" [(ngModel)]="cliente.App">
+</p>
+<p>
+  <span>Apm:</span>
+  <input type="text" [(ngModel)]="cliente.Apm">
+</p>
+<p>
+  <span>edad:</span>
+  <input type="number" [(ngModel)]="cliente.edad">
+</p>
+<span>sexo:</span>
+<input type="text" [(ngModel)]="cliente.sexo">
+
+<span>correo:</span>
+<input type="text" [(ngModel)]="cliente.correo">
+
+<p>
+  <button (click)="this.nuevoCliente()">Guardar</button>
+</p>-->
+
+<form [formGroup]="myform" novalidate>
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="email" class="form-control" [(ngModel)]="cliente.nombre" placeholder="Nombre"
+    formControlName="nombre">
+   
+  </div>
+  <div class="form-group">
+    <label>Apellido Paterno</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.App" placeholder="Apellido Paterno"
+    formControlName="App">
+  </div>
+  <div class="form-group">
+    <label>Apellido Materno</label>
+    <input type="text" class="form-control" [(ngModel)]="cliente.Apm" placeholder="Apellido Materno"
+    formControlName="Apm">
+   
+  </div>
+  <div class="form-group">
+    <label>Sexo</label>
+    <select class="form-control" [(ngModel)]="cliente.sexo"
+    formControlName="sexo">
+      <option value="M">M</option>
+      <option value="F">F</option>
+    </select>
+   
+  </div>
+  <div class="form-group">
+    <label>Edad</label>
+    <input type="number" class="form-control" [(ngModel)]="cliente.edad" placeholder="Edad"
+    formControlName="edad">
+  </div>
+  <div class="form-group">
+    <label>Correo</label>
+    <input type="email" class="form-control" [(ngModel)]="cliente.correo" placeholder="Correo"
+    formControlName="corre">
+   
+  </div>
+  <button (click)="this.nuevoCliente()" class="btn btn-primary" [disabled]="myform.invalid">AGREGAR</button>
+
+</form>
